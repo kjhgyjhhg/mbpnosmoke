@@ -1,0 +1,111 @@
+﻿$(document).ready(function () {
+
+    var ListPermission = 'Permission';
+    var UserFlag = 'false';
+    var account = '';
+    var ListItem;
+    SP.SOD.executeFunc('sp.js', 'SP.ClientContext', function () {});
+	SP.SOD.executeOrDelayUntilScriptLoaded(spLoadFinished ,"sp.js");
+
+	function spLoadFinished (){
+		//1.เอาคอมเม้นที่debuggerออก
+	
+		debugger;
+	    //getCurrentUser();
+	    checkLogin();
+	}
+	
+	
+	function checkLogin(){
+		var login = $(".ms-core-menu-root").length;
+		if(login == 0){
+			$("#suiteBar").attr("style","display:none;");
+			$("#s4-ribbonrow").attr("style","display:none;");
+		}
+		else{
+			$(".ms-core-brandingText").text("FDA");
+		}
+	}
+    
+    
+    function getCurrentUser() {
+        var context = new SP.ClientContext.get_current();
+        var web = context.get_web();
+        currentUser = web.get_currentUser();
+        context.load(currentUser);
+        context.executeQueryAsync(onSuccess, onFail);
+    }
+	
+	//2.เมื่อsuccessจะเอาfunctionนี้ เพิ่อgetข้อมูลuserลูกค้า
+    function onSuccess(sender, args) {
+        accountname = currentUser.get_loginName(); //extract the login name from the account name
+        username = currentUser.get_title(); 
+        var name = accountname .split(/\\/g);
+        var nameAcc = name[1];
+        account = nameAcc; //user ลูกค้าจะไปประกาศอยู่ใน "account"
+        LoadAllUserInGroup(); //รันไปfunction load user จาก List
+			
+    }
+    function onFail(sender, args) {
+        alert('Failed to get current user' + args.get_message());
+    }
+
+    function LoadAllUserInGroup() {
+        clientContext = new SP.ClientContext.get_current();
+        var web = clientContext.get_web();
+        var myList = web.get_lists().getByTitle(ListPermission);
+        var query = new SP.CamlQuery();
+        query.set_viewXml('<View><Query></Query></View>');
+        ListItem = myList.getItems(query);
+        clientContext.load(ListItem);
+        clientContext.executeQueryAsync(mySuccessFunction, myFailFunction);
+
+    }
+
+	//3.เมื่อsuccess จากมาfunctionนี้ จะเอา account user ที่getได้ มาเช็คกับ userที่มีพิมไว้ในList 25_CPB_Permisstion
+    function mySuccessFunction(sender, args) {
+        var tempUser = '';
+        var listItemEnumerator = ListItem.getEnumerator();
+        while (listItemEnumerator.moveNext()) { //วนลูปเช็คuserไปเรื่อยๆ
+            var item = listItemEnumerator.get_current();
+            var LoginName = item.get_item('Title'); //User ที่getได้
+            if (LoginName != null) {
+                if (LoginName.toLowerCase() == account.toLowerCase()) {
+                    UserFlag = true; //ถ้าuserเหมือนกัน set flag = true
+                    break;
+                }
+
+            }
+            
+        }
+
+
+        if (UserFlag == true) { //กรณีflagเป็นtrueจะไม่มีอะไรเกิดขึ้น แต่ถ้าเป็นfalseจะปิดฟันเฟือง
+
+        } else {
+        	// ปรับรูป
+    	  $(location).attr('href');
+    	   var pathname = window.location.pathname;
+
+    	var splitCheck = pathname.split("/");
+        var NameURL = splitCheck[3]; // _layouts
+              if (NameURL == '_layouts'){
+			 window.location.assign("http://www.fda.moph.go.th/sites/Narcotics")
+			 }
+            $('#siteactiontd').attr("style", "display:none;");
+            $('#suiteBarButtons').attr("style", "display:none;");
+            $('#sitesContent').attr("style", "display:none;");
+	
+        }
+        
+
+    }
+    function myFailFunction(sender, args) {
+        console.log('inside fail');
+        console.log(args.get_message() + "\n" + args.get_stackTrace());
+
+    }
+
+});
+
+

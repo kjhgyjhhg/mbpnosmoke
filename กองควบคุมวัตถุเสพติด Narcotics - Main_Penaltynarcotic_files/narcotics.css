@@ -1,0 +1,525 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Kanit&subset=thai,latin);
+body {
+  font-size: 0.86rem;
+  /*font-family: 'Kanit', sans-serif;*/
+
+}
+
+h1 {
+  font-size: 1.9rem;
+}
+
+.text-xs-right {
+  margin-top: 1rem;
+}
+
+.btn:focus, .btn.focus, .btn:active:focus, .btn.focus:active, .btn.active:focus, .btn.active.focus {
+  outline: none;
+}
+
+.btn-secondary:active:hover, .btn-secondary:active:focus, .btn-secondary:active.focus, .btn-secondary.active:hover, .btn-secondary.active:focus, .btn-secondary.active.focus, .open > .btn-secondary.dropdown-toggle:hover, .open > .btn-secondary.dropdown-toggle:focus, .open > .btn-secondary.dropdown-toggle.focus {
+  background-color: transparent;
+  border-color: #ccc;
+  border-left-color: transparent;
+  color: #ee1c25;
+}
+
+a {
+  color: #373a3c;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+  outline: none;
+  color: #373a3c;
+}
+
+h4, h4.text-primary {
+  line-height: 1.3;
+  font-size: 1rem;
+}
+
+.img-fluid {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-inline .nav-item + .nav-item, .nav-inline .nav-link + .nav-link {
+  margin-left: 0;
+}
+
+/* ====================== Header-Top+Logo ====================== */
+.bg {
+  background: url("../../images/narcotics/banner2.png") no-repeat center center;
+  position: fixed;
+  background-size: cover;
+  width: 100%;
+  min-height: 650px;
+  /*same height as jumbotron */
+  z-index: -1;
+}
+
+.jumbotron {
+  margin: 0;
+  padding: 0rem 0 0;
+  background: transparent;
+}
+
+/* ================= Main Logo ================= */
+.logo {
+  margin-top: 10rem;
+}
+
+/* ================= Main Navigation ================= */
+nav.main-navigation {
+  background: url("../../images/narcotics/bg.png");
+  padding: 2rem 0;
+  margin-top: 8rem;
+  /* search-login */
+}
+
+nav.main-navigation .row {
+  margin: 0;
+}
+
+nav.main-navigation li.nav-item {
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+}
+
+nav.main-navigation li.nav-item a.nav-link {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+nav.main-navigation li.nav-item a.nav-link:hover, nav.main-navigation li.nav-item a.nav-link:focus, nav.main-navigation li.nav-item a.nav-link:active {
+  color: #ee1c25;
+}
+
+/*nav.main-navigation li.nav-item a.nav-link.active {
+  color: #ee1c25;
+}*/
+
+nav.main-navigation .search-login {
+  padding: 2rem 0 0;
+}
+
+nav.main-navigation .search-login li.nav-item:last-child {
+  border-left: 1px solid #ffffff;
+}
+
+nav.main-navigation .search-login li.nav-item a.nav-link {
+  font-weight: normal;
+}
+
+nav.main-navigation .search-login .col-md-offset-4 {
+  margin-left: 31.5%;
+}
+
+nav.main-navigation .search-login .login.col-md-3 {
+  padding: 0;
+}
+
+nav.main-navigation .search-login .login.col-md-3 li.nav-item {
+  margin-top: 0.5rem;
+}
+
+nav.main-navigation .search-login .login.col-md-3 li.nav-item:last-child {
+  border-left: 1px solid #c7c7c7;
+  padding-left: 0.8rem;
+}
+
+nav.main-navigation .search-login .login.col-md-3 li.nav-item a.nav-link {
+  font-size: 1rem;
+}
+
+nav.main-navigation .search-login .form-control {
+  border-top-left-radius: 1.25rem;
+  border-bottom-left-radius: 1.25rem;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+nav.main-navigation .search-login ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #ffffff;
+}
+
+nav.main-navigation .search-login ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #ffffff;
+}
+
+nav.main-navigation .search-login :-ms-input-placeholder {
+  /* IE 10+ */
+  color: #ffffff;
+}
+
+nav.main-navigation .search-login :-moz-placeholder {
+  /* Firefox 18- */
+  color: #ffffff;
+}
+
+nav.main-navigation .search-login .btn {
+  border-top-right-radius: 1.25rem;
+  border-bottom-right-radius: 1.25rem;
+}
+
+nav.main-navigation .search-login .input-group .form-control:first-child, nav.main-navigation .search-login .input-group-addon:first-child, nav.main-navigation .search-login .input-group-btn:first-child > .btn, nav.main-navigation .search-login .input-group-btn:first-child > .btn-group > .btn, nav.main-navigation .search-login .input-group-btn:first-child > .dropdown-toggle, nav.main-navigation .search-login .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), nav.main-navigation .search-login .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+  border-right: 1px solid transparent;
+}
+
+nav.main-navigation .search-login .input-group .form-control:focus, nav.main-navigation .search-login .input-group .form-control:active, nav.main-navigation .search-login .input-group .form-control:hover {
+  border-right: 1px solid transparent;
+}
+
+nav.main-navigation .search-login .form-control {
+  transition: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+nav.main-navigation .search-login .form-control:focus {
+  border-color: #ffffff;
+}
+
+nav.main-navigation .search-login .btn-secondary {
+  border-color: #ffffff;
+  background-color: transparent;
+  border-left-color: transparent;
+  color: #ffffff;
+}
+
+nav.main-navigation .search-login .btn-secondary:hover, nav.main-navigation .search-login .btn-secondary:active, nav.main-navigation .search-login .btn-secondary:focus {
+  background-color: transparent;
+  border-color: #ffffff;
+  border-left-color: transparent;
+  color: #ee1c25;
+}
+
+/* ======================= Main Content ======================= */
+.main-content {
+  background-color: #ffffff;
+}
+
+.main-content .media {
+  min-height: 9rem;
+}
+
+.main-content .media-left {
+  padding-right: 1rem;
+}
+
+.main-content .side-bar .container-fs {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.main-content .side-bar .list-new {
+  border: 1px solid #c7c7c7;
+}
+
+.main-content .side-bar .list-new .table thead th {
+  border: none;
+  padding: 1rem 0.75rem;
+  font-size: 1.2rem;
+}
+
+.main-content .side-bar .list-new .table td {
+  border-top: 1px solid #e1e1e1;
+  padding: 0.15rem 0rem 1rem 0rem;
+}
+
+.main-content .side-bar .list-new .table td ul.nav li.nav-item {
+  padding-right: 0rem;
+  margin-left: -0.5rem;
+}
+
+.main-content .side-bar .list-new .table .col-xs-1 {
+  margin-left: -0.25rem;
+}
+
+.main-content .side-bar .list-new .table .col-xs-1,
+.main-content .side-bar .list-new .table .col-xs-11 {
+  padding-left: 0;
+  padding-right: 0.8rem;
+}
+
+.main-content .side-bar .list-new .table a,
+.main-content .side-bar .list-new .table strong {
+  color: #373a3c;
+}
+
+.main-content .side-bar .list-new .table a:hover, .main-content .side-bar .list-new .table a:focus,
+.main-content .side-bar .list-new .table strong:hover,
+.main-content .side-bar .list-new .table strong:focus {
+  text-decoration: underline;
+  outline: none;
+  color: #373a3c;
+}
+
+.main-content .side-bar .list-new i {
+  color: #ee1c25;
+}
+
+.main-content .news .col-lg-6,
+.main-content .law .col-lg-6 {
+  min-height: 11.5rem;
+}
+
+.main-content .events .text-muted {
+  text-align: right;
+}
+
+.main-content .events .ev-01 {
+  background: url("../../images/narcotics/pic_K_Jan8.jpg") no-repeat top center;
+}
+
+.main-content .events .ev-02 {
+  background: url("../../images/narcotics/Hemp_Sep58_p14.jpg") no-repeat top center;
+}
+
+.main-content .events .ev-03 {
+  background: url("../../images/narcotics/pic7_NK58.jpg") no-repeat top center;
+}
+
+.main-content .events .jumbotron {
+  background-size: cover;
+  min-height: 10rem;
+  border-radius: 0;
+  position: relative;
+}
+
+.main-content .events .jumbotron span.label {
+  border-radius: 0;
+  padding: 0.25rem 0.6rem 0.3rem;
+  position: absolute;
+  bottom: 0;
+  font-weight: normal;
+}
+
+.main-content .events .jumbotron span.label .day {
+  font-size: 1rem;
+}
+
+.main-content .events .jumbotron span.label .mont {
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+}
+
+.main-content .events .jumbotron span.label .year {
+  letter-spacing: 0.05rem;
+  line-height: 0.8rem;
+}
+
+.main-content .events p.event-content {
+  min-height: 7.5rem;
+}
+
+.main-content .law .media p {
+  margin-bottom: 0.25rem;
+}
+
+/* ================= Label Footer ================= */
+.label-footer {
+  background-color: #55595c;
+  color: #ffffff;
+}
+
+.label-footer .media-body a {
+  color: #ffffff;
+}
+
+.label-footer .count ul.list-inline {
+  margin-bottom: 0;
+}
+
+.label-footer .count table.table {
+  margin-bottom: 0;
+}
+
+.label-footer .count table.table td {
+  padding: 0.75rem 1rem;
+  border: 1px solid #c7c7c7;
+}
+
+.label-footer .count table.table td:first-child {
+  padding-left: 0;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid transparent;
+}
+
+/*====================== Footer ======================*/
+footer {
+  background-color: #ffffff;
+}
+
+.copyright {
+  background-color: #ee1c25;
+  color: #ffffff;
+}
+
+.copyright p {
+  margin-bottom: 0;
+}
+
+/*====================== breakpoint-up ======================*/
+@media (min-width: 768px) {
+  .col-md-3 {
+    padding: 0;
+  }
+}
+
+/*====================== breakpoint-down ======================*/
+@media (max-width: 1199px) {
+  .main-content .events p.event-content {
+    min-height: 10rem;
+  }
+  .p-x-1 {
+    padding-right: 0.5rem !important;
+    padding-left: 0.5rem !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .main-content .media {
+    min-height: 5rem;
+  }
+  footer.p-y-3 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1rem !important;
+  }
+  .main-content .p-y-3 {
+    padding-bottom: 0 !important;
+  }
+  .main-content .news .col-lg-6, .main-content .law .col-lg-6 {
+    min-height: 5rem;
+    margin-top: 1rem;
+  }
+  h1 {
+    font-size: 1.75rem;
+  }
+  .main-content .events .jumbotron {
+    min-height: 14rem;
+  }
+  .main-content .events p.event-content {
+    min-height: 4rem;
+  }
+  .main-content .news .col-md-6, .main-content .law .col-md-6 {
+    min-height: 16rem;
+  }
+  .list-new .col-md-12 {
+    padding-left: 0.7rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .list-new .col-xs-11 {
+    width: 80%;
+  }
+  .logo {
+    margin-top: 3rem;
+  }
+  .label-footer .media {
+    margin-left: 30%;
+  }
+  .label-footer .count table.table td {
+    padding: 0rem 0.25rem;
+  }
+  .count {
+    margin-top: 1.5rem;
+  }
+  .main-content .container-fs {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .main-content .events .jumbotron {
+    min-height: 18rem;
+  }
+  .main-content .events p.event-content {
+    min-height: 5rem;
+  }
+  .main-content .news .col-md-6, .main-content .law .col-md-6 {
+    min-height: 5rem;
+  }
+  .main-content .side-bar .list-new .table td {
+    padding-left: 1rem;
+  }
+  .main-content .side-bar .list-new .table .col-xs-1 {
+    margin-left: 0.5rem;
+  }
+  .list-new .col-md-12 {
+    padding-left: 2rem;
+  }
+  .list-new .col-xs-1 {
+    width: 1.5rem;
+  }
+  .list-new ul.nav {
+    padding-left: 2.5rem;
+  }
+}
+
+@media (max-width: 543px) {
+  .search-login .col-xs-6 {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+  }
+  .main-content .media {
+    min-height: 1rem;
+  }
+  .text-xs-right {
+    margin-top: 0rem;
+  }
+  .img-fluid.logo-brand {
+    height: 2rem;
+  }
+  .jumbotron {
+    padding: 2rem 0 0;
+  }
+  .logo .img-fluid {
+    height: 4rem;
+  }
+  .navbar {
+    padding: 0 0 1rem;
+  }
+  .navbar-toggler {
+    padding: 0 0 2rem;
+  }
+  nav.main-navigation .search-login li.nav-item:last-child {
+    padding-left: 0.5rem;
+  }
+  nav.main-navigation .search-login {
+    padding: 1.5rem 0 0;
+  }
+  nav ul.nav.nav-inline {
+    margin-top: 0.4rem;
+  }
+  nav.main-navigation li.nav-item a.nav-link {
+    font-size: 0.8rem;
+  }
+  nav.main-navigation {
+    margin-top: 3rem;
+    padding: 1rem 0;
+  }
+  nav.main-navigation li.nav-item {
+    padding: 0rem 0.1rem;
+  }
+  .label-footer .media {
+    margin-left: 10%;
+  }
+  .main-content .events .jumbotron {
+    min-height: 12rem;
+  }
+  .main-content .p-y-3 {
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important;
+  }
+  img.media-object {
+    height: 40px;
+  }
+}
+
+/*# sourceMappingURL=narcotics.css.map */
